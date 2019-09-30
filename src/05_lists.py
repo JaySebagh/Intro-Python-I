@@ -33,4 +33,4 @@ print(len(x))
 # Print all the values in x multiplied by 1000
 # YOUR CODE HERE
 for i in x:
-    print(i * 1000)
+    print(i * 10005)
