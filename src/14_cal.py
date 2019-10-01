@@ -22,3 +22,36 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+month = input("Month: ")
+year = input("Year: ")
+
+currY = datetime.now().year
+currM = datetime.now().month
+
+def cal():
+  if len(month) == 0 and len(year) == 0:
+    print(calendar.month(currY, currM))
+  elif len(month) > 0 and len(year) == 0:
+    m = int(month)
+    print(calendar.month(currY, m))
+  elif len(month) > 0 and len(year) > 0:
+    m = int(month)
+    y = int(year)
+    print(calendar.month(y, m))
+  elif len(month) == 0 and len(year) > 0:
+    print("Error: Month Required")
+cal()
+
+# def cal():
+#   if month == "" and year == "":
+#     print(calendar.month(currY, currM))
+#   try:
+#     int(month) and len(year) > 0
+#   except:
+#     print("Error: Expected Month")
+#   else:
+#     m = int(month)
+#     print(calendar.month(currY, m))
+    
+# cal()
